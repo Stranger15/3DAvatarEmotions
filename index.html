@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scanta| Everything Augmented Reality</title>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="Refresh" content="0;URL=https://www.scanta.io" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Scanta is a unique immersive Augmented Reality .
+
+    We would like to introduce you to the world of Scanta, we promise to leave you speechless every time with immersive experiences and storylines.
+
+    Experiencing Scanta's world is simple. Download the app, Look out for Scanta markers around you, open the App and scan the Scanta marker and get prepared to be mesmerised.
+
+    Wait.. there's more, Where there is Scanta, there is always a happy ending. Get a special gift on every scan. Keep discovering the world of Scanta. Scanta is coming to your town very soon.
+    Next Generation Augmented Reality App. Scan, Play and Win Free Gifts, Shopping Coupons and many more!" />
+    <meta name="keywords" content="AR basketball , scanta, scanta app, baaketball, AR Dunk, best free ar game, 
+    free ar game, free ios games, free games on app store, AR, Virtual reality, mixed reality,
+    free basketball game,
+    augmented reality technology,augmented reality examples,definition of augmented reality,top augmented reality apps,
+    augmented reality software,3d augmented reality,augmented reality software free,augmented reality applications,
+    augmented reality,augmented reality apps,augmented reality technology in education,augmented reality technology in policing,
+    augmented reality technology video vr apps for iphone,augmented app,top vr app,Ios vr apps,Ios game,Apps games,
+    best free iphone game,best iphone game2017,iphone 10 game,iphone x games" />
+    <meta name="author" content="Scanta.io" />
+    <meta name="google-site-verification" content="29CxMPHEtO1jLz7UsNQUaKddNwwvArH2TZ0whM3gba8" />
+    <!-- REDIRECT -->
+    <!-- <script>
+        if (window.location.protocol === "http:") {
+            // alert("ok");
+            window.location = "https://www.scanta.io";
+        }
+    </script> -->
+
+    <!--  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- material icon -->
+   
+    <!--  -->
+
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <link rel="stylesheet" href="./css/unity.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script src="./newjs/unity.js"></script>
+
+    <!--  -->
+</head>
+
+<body>
+    <!-- homepage -->
+
+        <!-- <div class="mobile-nav">
+
+
+        </div> -->
+        <!-- elements and animations -->
+            <!-- <br>
+            <br>
+            <br>
+            <br>
+            <div style="color:aqua; text-align: center; width: auto;">
+                <h4>Speech to text converter</h4>
+                <div id="listening">click to start recording</div>
+                <div id="speechToText"></div>
+
+                <button id="mic" onclick="StartConverting();"> <span class="fa fa-microphone"></span></button> -->
+                <!-- <button onclick="stopConverting();">stop</button> -->
+                <!-- <div id="audioSource"></div>
+            </div> -->
+
+            <!-- <h1 class="center" id="headline">
+                <a href="index.html">
+                  Web Speech API</a> Demonstration</h1> -->
+        
+        <div class="main">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6 information">
+              
+              <div id="info">
+                <p id="info_start">Click on the microphone icon and begin speaking</p>
+                <p id="info_speak_now">Speak now</p>
+                <p id="info-thankyou">Thanks for visiting Scanta.io</p>
+                <p id="info_no_speech">No speech was detected. You may need to adjust your
+                  <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+                    microphone settings</a></p>
+                <p id="info_no_microphone" style="display:none">
+                  No microphone was found. Ensure that a microphone is installed and that
+                  <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+                  microphone settings</a> are configured correctly</p>
+                <p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
+                <p id="info_denied">Permission to use microphone was denied</p>
+                <p id="info_blocked">Permission to use microphone is blocked</p>
+                <p id="info_upgrade">Web Speech API is not supported by this browser.
+                  Upgrade to <a href="//www.google.com/chrome">Chrome</a>
+                  version 25 or later</p>
+              </div>
+
+                <div class="row results">
+                  <div id="" class="text-box col-6">
+                    <div class="col-12"></div>
+                    <div class="col-12 text" style="display: inline-block" >
+                        <span id="final_span" class="final"></span>
+                        <span id="interim_span" class="interim"></span>
+                    </div>
+                  </div>
+                  <div class="col-6"></div>
+                </div>
+                
+                <div class="mic_wave row">
+
+                  <div class="col-12 mic">
+                    <button id="start_button" onclick="startButton(event)">
+                      <img id="start_img" src="./images/mic/mic.png" alt="Start"></button>
+                  </div>
+
+                  <div class="col-12">
+                      <img id="wave" class="img-fluid hideWave" src="./audio waves/wave3.gif" alt="Start">
+                  </div>
+
+                </div>
+
+
+              <!-- <div class="center" style="display: none;">
+                <div class="sidebyside" style="text-align:right">
+                  <button id="copy_button" class="button" onclick="copyButton()">
+                    Copy and Paste</button>
+                  <div id="copy_info" class="info">
+                    Press Control-C to copy text.<br>(Command-C on Mac.)
+                  </div>
+                </div>
+                <div class="sidebyside">
+                  <button id="email_button" class="button" onclick="emailButton()">
+                    Create Email</button>
+                  <div id="email_info" class="info">
+                    Text sent to default email application.<br>
+                    (See chrome://settings/handlers to change.)
+                  </div>
+                </div>
+                <p>
+                <div id="div_language">
+                  <select id="select_language" onchange="updateCountry()"></select>
+                  &nbsp;&nbsp;
+                  <select id="select_dialect"></select>
+                </div>
+              </div> -->
+
+            </div>
+
+            <div id="unityBuild" class="col-sm-6 col-md-6 col-lg-6">
+              <div class="webgl-content">
+                  
+                <div id="gameContainer"></div>
+                  
+                  <!-- <button id="idle" class="btn btn-simple" onclick="unityRun('1');">idle</button>
+                  <br />
+                  <button id="happy" class="btn btn-simple" onclick="unityRun('2');">happy</button>
+                  <br />
+                  <button id="sad" class="btn btn-simple" onclick="unityRun('3');">sad</button>
+                  <br />
+                  <button id="angry" class="btn btn-simple" onclick="unityRun('4');">angry</button>
+                  <br />
+                  <button id="excited" class="btn btn-simple" onclick="unityRun('5');">excited</button>
+                  <br />
+                  <button id="bored" class="btn btn-simple" onclick="unityRun('6');">bored</button>
+                  <br />
+                  <button id="scary" class="btn btn-simple" onclick="unityRun('7');">scary</button>
+                  <br /> -->
+              
+              </div>
+              <div class="row powered-logo">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4">
+                  <img src="./images/logo/logo.png" id="poweredBy" >
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          </div>
+
+        
+    <!-- ******************************************************* -->
+
+    <!-- navbar -->
+
+    <!-- ******************************************************* -->
+    <!-- content-1 -->
+
+   
+    <!-- **************************************** -->
+    <!-- footer -->
+
+    <!-- **************************************** -->
+
+    <!-- **************************************** -->
+
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <!-- Preloader !remove please if you do not want -->
+    <div id="preloader">
+
+
+    </div>
+    <!--  -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js'></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+
+
+    <!-- ------------------------------ -->
+
+    <!-- custom js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <style>
+        .image-mask {
+
+            clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);
+            -webkit-clip-path: polygon(50% 50%,
+                50% 50%,
+                50% 50%,
+                50% 50%,
+                50% 50%,
+                50% 50%);
+
+        }
+
+        .image-mask-animate {
+            clip-path: polygon(0% 0%, 93% 25%, 93% 75%, 50% 99%, 7% 75%, 7% 25%);
+            -webkit-clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 99%, 7% 75%, 7% 25%);
+            transition: all 1500ms ease-out;
+        }
+    </style>
+    <!-- JS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119353516-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-119353516-1');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+
+    <!-- <script src="newjs/textToSpeech.js"></script> -->
+    <!-- <script src="newjs/speechToText.js"></script> -->
+    <script src="newjs/newSpeechToText.js"></script>
+    <script>
+    
+    // $('document').ready(function(){
+      
+    //   setInterval(function(){
+
+    //     console.log("======================\n"+
+    //     "./audio waves/wave1.gif"+"?"+new Date().getTime()+
+    //     "\n==========================");
+
+    //     $('#wave').attr('src', "./audio waves/wave1.gif"+"?"+new Date().getTime());
+    //   },6000)
+    // });
+
+    </script>
+    <script>
+
+      if(screen.width >= 760 & screen.width<=1024){
+          $('#unityBuild').removeClass("col-sm-6");
+          $('#unityBuild').removeClass("col-md-6");
+          $('#unityBuild').removeClass("col-lg-6");
+          $('#unityBuild').addClass("col-12");
+          $('.information').removeClass("col-sm-6");
+          $('.information').removeClass("col-md-6");
+          $('.information').removeClass("col-lg-6");
+          $('.information').addClass("col-12");
+        }
+        // $(document).ready(function() {
+        //     window.onload = function(){
+        //         navigator.mediaDevices.getUserMedia({ audio: true })
+        //         .then(function(stream) {
+        //             console.log('You let me use your mic!')
+        //         })
+        //         .catch(function(err) {
+        //             console.log('No mic for you!')
+        //         });
+        //     }
+            
+        // });
+    </script>
+</body>
+
+
+
+</html>
+</body>
+
+</html>

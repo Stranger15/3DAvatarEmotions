@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity WebGL Player | webgl</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate(
+        "gameContainer",
+        "Build/buildtrial.json",
+        { onProgress: UnityProgress }
+      );
+
+      // setInterval(function unityRun() {
+      //   console.log(
+      //     "======== \n Calling the unity function PlayAnimation \n========="
+      //   );
+
+      //   gameInstance.SendMessage("Main Camera", "PlayAnimation", "");
+      // }, 10000);
+
+      // var value = "3";
+
+      function unityRun(value) {
+        console.log(
+          "======== \n Calling the unity function PlayAnimation \n========="
+        );
+
+        gameInstance.SendMessage("Main Camera", "PlayAnimation", value);
+      }
+
+      // setInterval(function() {
+      //   console.log(value);
+
+      //   value += 1;
+
+      //   console.log(value);
+
+      //   if (value == 5) {
+      //     value = 1;
+      //   }
+      //   value.toString;
+
+      //   unityRun();
+      // }, 5000);
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+
+      <button id="happy" onclick="unityRun('1');">1</button>
+      <br />
+      <button id="2" onclick="unityRun('2');">2</button>
+      <br />
+      <button id="angry" onclick="unityRun('3');">angry</button>
+      <br />
+      <button id="excited" onclick="unityRun('4');">excited</button>
+      <br />
+      <!-- <div class="footer">
+    <div class="webgl-logo"></div>
+    <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+    <div class="title">webgl</div>
+  </div> -->
+    </div>
+  </body>
+</html>
